@@ -1,16 +1,14 @@
 # S&P 500 Financial Analysis Project
 
-This Python project analyses companies within the S&P 500 by sector using financial data from Yahoo Finance. The aim of the project is to compare firms within the same sector using a range of financial metrics and produce a ranked output based on their relative performance.
+This project analyses companies within the S&P 500 by sector using financial data from Yahoo Finance.
 
-## Overview
+It downloads financial statement data, calculates company-level financial ratios, ranks stocks within a chosen sector and exports the results to Excel. The project also includes further analysis using insider purchase data and analyst recommendations.
 
-The project groups S&P 500 companies into sectors, allows a sector to be selected, then downloads quarterly financial data for each company in that sector. It uses income statement, balance sheet and cash flow data to calculate several financial ratios and measures.
+## What the project does
 
-The project then ranks companies across the selected metrics using a cumulative scoring model. Lower cumulative scores indicate stronger relative performance across the measures used.
+The programme allows a user to select a sector, such as Real Estate, Technology or Financial Services. It then analyses the stocks in that sector and calculates a range of financial metrics.
 
-## Metrics Included
-
-The project calculates and compares companies using:
+The main financial metrics include:
 
 * Gross profit margin
 * Operating profit margin
@@ -18,43 +16,47 @@ The project calculates and compares companies using:
 * Return on assets
 * Return on equity
 * Free cash flow to equity
-* Debt-to-equity ratio
+* Debt-to-equity
 * Quick ratio
+* Cash ratio
 
-## Tools Used
+The project then ranks stocks using a cumulative scoring model. Stronger-performing stocks receive lower ranking points, allowing the programme to produce a final ranked list for the chosen sector.
+
+## Additional analysis
+
+After the initial financial ranking, the project performs further analysis on the top-ranked stocks using:
+
+* Insider purchase activity
+* Analyst recommendation data
+
+This provides an additional view beyond the core financial statement ratios.
+
+## Excel export and visualisation
+
+The project exports the cleaned financial metric tables into an Excel workbook, with separate sheets for each metric. The Excel file is generated when the script is run and is not included in this repository.
+
+The project also includes early-stage matplotlib functionality to visualise selected financial metrics. This is still being developed, but it shows how the analysis can be extended beyond tables into charts.
+
+## Tools used
 
 * Python
-* yfinance
 * pandas
 * numpy
-* PyCharm
+* yfinance
+* matplotlib
+* openpyxl
 
-## Why I Built This
+## Why I built this
 
-I built this project to apply Python to financial analysis and develop a more practical understanding of how company data can be used to compare businesses. I wanted to move beyond theory and work directly with financial statement data, ratios and ranking logic.
+I built this project to apply Python to financial analysis in a practical way. It allowed me to work with real company financial data, practise pandas DataFrame manipulation, calculate financial ratios and develop a simple investment-style ranking model.
 
-The project also helped me develop my ability to work with larger datasets, handle missing financial information, and structure outputs in a way that supports investment-style analysis.
+The project also helped me practise handling incomplete financial data, exporting results to Excel, building early visualisations and structuring a larger Python script using classes.
 
-## How It Works
+## Data source note
 
-1. A sector is selected from the S&P 500 sector dictionary.
-2. The script downloads quarterly financial data for each company in that sector.
-3. Income statement, balance sheet and cash flow data are combined into a structured DataFrame.
-4. Financial ratios are calculated for each company where data is available.
-5. Companies are ranked for each metric.
-6. A cumulative scoring model is used to identify the strongest companies within the selected sector.
+This project uses Yahoo Finance data through the `yfinance` package. Data availability can vary by ticker, and repeated requests may occasionally trigger rate limits. If this happens, wait before rerunning the script or test with a smaller number of tickers.
 
-## Notes
+## Disclaimer
 
-This project is intended as a personal learning project and portfolio piece. It is not investment advice. The ranking model is simplified and designed to demonstrate data analysis, financial ratio calculation and Python programming skills.
+This project is for educational purposes only and should not be treated as investment advice.
 
-## Future Improvements
-
-Potential improvements include:
-
-* Refactoring repeated ratio calculations into reusable functions
-* Adding charts and visualisations
-* Exporting final rankings to Excel or CSV
-* Creating a cleaner user input system for sector selection
-* Improving error handling where Yahoo Finance data is missing
-* Expanding the scoring model to include valuation metrics
