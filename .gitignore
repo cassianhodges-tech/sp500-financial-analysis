@@ -5,3 +5,4 @@ __pycache__/
 .env
 .DS_Store
 test.py
+outputt_fund.txt
