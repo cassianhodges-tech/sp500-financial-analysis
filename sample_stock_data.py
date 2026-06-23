@@ -1,3 +1,20 @@
+"""
+Sample Stock Data Template
+
+This file creates a sample financial statement DataFrame using the same structure as the main yfinance financial data.
+
+The sample DataFrame:
+
+* Pulls cash flow, income statement and balance sheet structure from a sample ticker
+* Converts each statement into the same MultiIndex format used in the main project
+* Combines the statements into one DataFrame
+* Sets all values to NaN so the DataFrame acts as a structural template rather than real company analysis
+
+This is used to help maintain a consistent DataFrame format when combining financial statements across companies.
+
+Note: The sample stock data is not used as a real investment input and should not be interpreted as financial analysis of the sample ticker.
+"""
+
 import yfinance as yf
 import pandas as pd
 import numpy as np
