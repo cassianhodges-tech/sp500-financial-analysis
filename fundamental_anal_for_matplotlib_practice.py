@@ -1,3 +1,21 @@
+"""
+S&P 500 Financial Analysis Project
+
+This project analyses companies within the S&P 500 by sector using financial data from Yahoo Finance.
+
+The script:
+
+* Groups S&P 500 companies by sector
+* Downloads quarterly income statement, balance sheet and cash flow data using yfinance
+* Combines financial statement data into structured pandas DataFrames
+* Calculates financial metrics including profit margins, ROA, ROE, FCFE, debt-to-equity and quick ratio
+* Ranks companies within a selected sector using a cumulative scoring model
+* Flags companies where financial data is missing or incomplete
+
+This was built as a personal Python and financial analysis project to practise working with real company data, financial ratios and investment-style screening logic.
+
+Note: This project is for educational purposes only and is not investment advice.
+"""
 
 import yfinance as yf
 import pandas as pd
