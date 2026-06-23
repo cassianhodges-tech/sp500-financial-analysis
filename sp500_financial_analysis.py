@@ -268,7 +268,7 @@ class Financials:
                        Topic, Company, Measurements on index
                        Years on columns
         """
-        from dummy_stock import dummy_stock_df
+        from sample_stock_data import dummy_stock_df
         print('Computing cash flow dataframe')
         cash_flow = self.cash_flow_dfs.get_cash_flow('cash_flow')
         # cash_flow = self.cash_flow_dfs.get_cash_flow('quarterly_cash_flow')
