@@ -1,3 +1,24 @@
+"""
+S&P 500 Financial Analysis and Ranking Project
+
+This project analyses companies within the S&P 500 by sector using financial data from Yahoo Finance.
+
+The programme:
+
+* Downloads income statement, balance sheet and cash flow data using yfinance
+* Organises company financials into structured pandas DataFrames
+* Calculates key financial metrics including gross profit margin, operating profit margin, net profit margin, ROA, ROE, FCFE, debt-to-equity, quick ratio and cash ratio
+* Ranks companies using a cumulative scoring model across multiple financial metrics
+* Exports cleaned financial metric tables to an Excel workbook
+* Includes early-stage matplotlib functionality to visualise selected financial metrics
+* Performs further analysis on top-ranked stocks using insider purchase data and analyst recommendations
+* Flags missing or incomplete data where Yahoo Finance does not provide full information
+
+This was built as a personal Python project to practise financial analysis, data cleaning, pandas DataFrame manipulation, Excel export, matplotlib visualisation and investment-style screening logic.
+
+Note: This project is for educational purposes only and is not investment advice.
+"""
+
 import sys
 import yfinance as yf
 import pandas as pd
