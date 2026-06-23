@@ -1553,7 +1553,8 @@ stocks_ranked = compute_results_obj.compute_results_linear(stocks_chosen='some')
 print(stocks_ranked)
 
 
-def Conclusions_other_metrics(Complete_rankings_of_stocks_top_n):
+def \
+        Conclusions_other_metrics(Complete_rankings_of_stocks_top_n):
     print('*' * 50)
     print('CONCLUSIONS')
     Complete_rankings_of_stocks_top_n = sorted(Complete_rankings_of_stocks_top_n.items(), key=lambda x: x[1])
