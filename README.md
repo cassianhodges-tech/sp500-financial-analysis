@@ -46,6 +46,25 @@ The project also includes early-stage matplotlib functionality to visualise sele
 * matplotlib
 * openpyxl
 
+## Project structure
+
+The repository contains the following main files:
+
+* `sp500_financial_analysis.py`
+  This is the main analysis script. It downloads financial data from Yahoo Finance, organises income statement, balance sheet and cash flow data into pandas DataFrames, calculates financial ratios, ranks companies within a selected S&P 500 sector and exports the results to Excel.
+
+* `sample_stock_data.py`
+  This file creates a sample financial statement DataFrame using the same structure as the main yfinance financial data. It acts as a template to help keep the DataFrame format consistent when combining financial statements across companies.
+
+* `requirements.txt`
+  Lists the Python packages required to run the project.
+
+* `.gitignore`
+  Excludes local files such as virtual environments, test files, cached Python files and generated Excel outputs from the repository.
+
+* `README.md`
+  Provides an overview of the project, how it works and the tools used.
+
 ## Why I built this
 
 I built this project to apply Python to financial analysis in a practical way. It allowed me to work with real company financial data, practise pandas DataFrame manipulation, calculate financial ratios and develop a simple investment-style ranking model.
