@@ -51,7 +51,7 @@ The project also includes early-stage matplotlib functionality to visualise sele
 The repository contains the following main files:
 
 * `sp500_financial_analysis.py`
-  This is the main analysis script. It downloads financial data from Yahoo Finance, organises income statement, balance sheet and cash flow data into pandas DataFrames, calculates financial ratios, ranks companies within a selected S&P 500 sector and exports the results to Excel.
+  This is the main analysis script. It downloads financial data from Yahoo Finance, organises income statement, balance sheet and cash flow data into pandas DataFrames, calculates financial ratios, ranks companies within a selected S&P 500, consdiers analyst recommendations and inside share selling, with optional excel and matplotlib visualisation
 
 * `sample_stock_data.py`
   This file creates a sample financial statement DataFrame using the same structure as the main yfinance financial data. It acts as a template to help keep the DataFrame format consistent when combining financial statements across companies.
